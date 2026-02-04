@@ -7,12 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    env:
+         TAG: github.ref_name
     steps:
       - name: Checkout
         uses: actions/checkout@v6
       - name: Prepare archive
         run: |
-         TAG="${{ github.ref_name }}"
          git archive \
            --format=zip \
            --output=gha-test-${TAG}.zip \
