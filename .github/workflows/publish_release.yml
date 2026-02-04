@@ -15,7 +15,7 @@ jobs:
          TAG="${{ github.ref_name }}"
          git archive \
            --format=zip \
-           --output=release.zip
+           --output=release.zip \
            ${TAG}
       - name: Release
         uses: softprops/action-gh-release@v2
