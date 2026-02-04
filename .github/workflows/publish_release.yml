@@ -15,7 +15,7 @@ jobs:
          TAG="${{ github.ref_name }}"
          git archive \
            --format=zip \
-           --output=release.zip \
+           --output=gha-test-${TAG}.zip \
            --prefix=gha-test-${TAG}/ \
            --worktree-attributes \
            -v \
@@ -24,4 +24,4 @@ jobs:
         uses: softprops/action-gh-release@v2
         if: github.ref_type == 'tag'
         with:
-          files: release.zip
+          files: gha-test-${TAG}.zip
