@@ -16,7 +16,8 @@ jobs:
          git archive \
            --format=zip \
            --output=release.zip \
-           --prefix=gha-test-${TAG}/
+           --prefix=gha-test-${TAG}/ \
+           --worktree-attributes \
            ${TAG}
       - name: Release
         uses: softprops/action-gh-release@v2
