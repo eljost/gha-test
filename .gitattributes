@@ -1,5 +1,5 @@
 .gitattributes export-ignore
 .gitignore export-ignore
-.exclude_dir/ export-ignore
+.exclude_dir/* export-ignore
 .include-dir/exclude3 export-ignore
-.github/ export-ignore
+.github/* export-ignore
