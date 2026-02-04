@@ -16,7 +16,7 @@ jobs:
          git archive \
            --format=zip \
            --output=release.zip
-           $TAG
+           ${TAG}
       - name: Release
         uses: softprops/action-gh-release@v2
         if: github.ref_type == 'tag'
